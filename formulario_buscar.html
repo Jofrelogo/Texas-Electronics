@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Insertar Producto</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/flick/jquery-ui.min.css">
+  <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="estilos/formulario_buscar.css">
+</head>
+<body>
+
+  <div class="encabezado">
+    <img class="di" src="imagenes/electro.JPG" alt="">  
+    <h1>Texas Electronics</h1>
+    <img class="di" src="imagenes/electro.JPG" alt="">        
+  </div>
+
+
+<div class="container">
+  <h2>Buscar Productos</h2>
+
+  <form class="form-horizontal" action="actualizar.php" role="form" method="POST">
+
+
+    <div class="input">
+      <label>Codigo de producto:</label>
+      <input type="text" class="form-control"  name="code" placeholder="Ingrese el codigo del producto">
+    </div>
+    <br>
+    <div class="input">
+      <label>Nombre del producto:</label>
+      <input type="text" class="form-control"  name="nombre" placeholder="Ingrese el nombre del producto">
+    </div>
+    <br>
+    <div class="input">
+      <label>Marca del producto:</label>
+      <input type="text" class="form-control"  name="marca" placeholder="Ingrese la marca del producto">
+    </div>
+    <br>
+    <div class="input">
+      <label>Precio del producto:</label>
+      <input type="text" class="form-control" name="precio" placeholder="Ingrese el precio del producto">
+    </div>
+    <br>
+    <div class="input">
+      <label>Cantidad:</label>
+      <input type="text" class="form-control" name="cantidad" placeholder="Ingrese la cantidad de producto">
+    </div>
+    <br>
+
+    <button type="submit" name="submit" class="btn btn-default">Buscar informacion</button>
+  </form>
+
+</div>
+
+</body>
+</html>

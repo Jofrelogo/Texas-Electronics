@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Calculo de Precio y Ganancia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="estilos/calculo_precio.css">
+</head>
+<body>
+
+<div class="encabezado">
+  <img class="di" src="imagenes/electro.JPG" alt="">  
+  <h1>Texas Electronics</h1>
+  <img class="di" src="imagenes/electro.JPG" alt=""> 
+</div>
+
+<div class="calculo"></div>
+  <h2>Calculo de Precio y Ganancias</h2>
+
+<script>
+  function venta(){
+      
+      var num_precio = document.f1.val_precio.value;
+      var por_utilidad = document.f1.val_utilidad.value;
+      var por_impuesto = document.f1.val_impuesto.value;
+      v_uti = (parseFloat(num_precio)*parseFloat(por_utilidad))/100
+      v_imp = (parseFloat(num_precio)*parseFloat(por_impuesto))/100
+      v_venta =parseFloat(num_precio) + v_imp + v_uti
+      
+    document.f1.cal_venta.value=v_venta;
+    document.f1.cal_gana.value=v_uti;
+  }
+</script> 
+
+  <form name="f1" action="calculadora.html" method="POST">
+    <div class="form-group">
+    	
+      <label for="precio">Precio de Compra:</label>
+      <input type="text" class="form-control" id="val_precio" placeholder="Ingrese Precio de Compra" name="val_precio">
+      <br>
+      <label for="utilidad">% Utilidad:</label>
+      <input type="text" class="form-control" id="val_utilidad" placeholder="Ingrese % Utilidad" name="val_utilidad">
+      <br>
+      <label for="impuesto">% Impuesto:</label>
+      <input type="text" class="form-control" id="val_impuesto" placeholder="Ingrese % Impuesto" name="val_impuesto">
+      <br>
+
+      <input type="Button" name="" value="Calcular" onclick="venta()" class="btn btn-primary">
+      <input type="Button" name="" value="Limpiar" onclick="reset()" class="btn btn-primary">
+      <br><br>
+      <label for="valor">Valor de Venta:</label>
+      <input type="text" class="form-control" id="cal_venta" name="cal_venta" placeholder="Aquí se imprime el Valor de Venta">
+      <br>
+      <label for="ganancia">Ganancia:</label>
+      <input type="text" class="form-control" id="cal_gana" name="cal_gana" placeholder="Aquí se imprime la Ganancia">
+
+	  </div>
+
+  </form>    
+</div>
+
+</body>
+</html>
